@@ -14,7 +14,10 @@ long_seq <- c(1, 0, 1, 0, 1, 0, 1)
 short_seq <- c(0, 1, 0)
 find_first_pos(long_seq, short_seq)
 
-
+# функция проводит n_iter экспериментов,
+# чтобы понять, какая последовательность A или B выпадает раньше
+# для проверки генерируются последовательности длины size = 30
+# поэтому возможны ситуации ничьи, когда ни A, ни B не выпали
 fight_AB <- function(short_seq_A, short_seq_B, n_iter = 2000, size = 30) {
   count_A <- 0
   count_B <- 0
@@ -38,7 +41,7 @@ fight_AB <- function(short_seq_A, short_seq_B, n_iter = 2000, size = 30) {
 fight_AB(c(0, 1, 1), c(1, 0, 1), n_iter = 5000)
 fight_AB(c(0, 0, 0), c(0, 1, 0), n_iter = 5000)
 
-
+# создает все последовательности из 0 и 1 длины short_len
 generate_all <- function(short_len) {
   all_combinations <- matrix(0, nrow = 2^short_len, short_len)
   for (i in 0:(2^short_len - 1)) {
@@ -50,6 +53,8 @@ generate_all <- function(short_len) {
 
 generate_all(3)
 
+# соревнует между собой все последовательности длины short_len
+# на выходе матрица p_{ij} = вероятность победы последовательности i над последовательностью j
 fight_all <- function(short_len, n_iter = 5000) {
   n_seq <- 2^short_len
   fight_seq <- generate_all(short_len)
