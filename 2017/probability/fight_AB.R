@@ -1,3 +1,5 @@
+library(xtable) # для красивой латеховской таблицы
+
 find_first_pos <- function(long_seq, short_seq) {
   n_long <- length(long_seq)
   n_short <- length(short_seq)
@@ -85,3 +87,6 @@ res2
 
 res3 <- fight_all(3)
 res3
+
+
+xtable(res3)
