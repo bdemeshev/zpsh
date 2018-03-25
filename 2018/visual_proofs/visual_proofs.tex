@@ -1,0 +1,136 @@
+\documentclass[a4paper, 12pt]{article}
+
+
+\usepackage{mathrsfs}
+
+\usepackage{amscd}
+\usepackage[paper=a4paper,
+top=2cm, bottom=2cm, left=2cm, right=2cm, includefoot]{geometry} % размер листа бумаги
+
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{floatrow} % для выравнивания рисунка и подписи
+\usepackage{caption} % для пустых подписей
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath, amsfonts} % куча стандартных математических плюшек
+
+\usepackage{comment} % для комментариев
+
+\usepackage{multicol} % текст в несколько колонок
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+
+\usepackage{booktabs}
+
+\usepackage{url} % для вставки интернет-ссылок
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+\def\cN{\mathcal{N}}
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Доказательства без слов}
+\chead{}
+\rhead{ЗПШ-2018}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+
+
+\section{Презентация}
+
+Презентация длится 10 минут, три дубля презентации для разных школьников. 
+Объявленная аудитория 6-8 класс.
+
+Простая загадка:
+\[
+   1 + 3 = ?^2
+\]
+
+Загадка посложнее:
+\[
+ 1 + 3 + 5 + 7 + 9 + 11 = ?^2
+\]
+
+Геометрическое решение с помощью сложения уголков.
+
+Пробуем 
+
+\[
+ 1 + 3 + 5 + 7 + 9 + 11 + 13 + \ldots + 103 = ?^2
+\]
+
+Наводящие вопросы с надписями на доске:
+\begin{enumerate}
+  \item Сколько чисел от 1 до 100?
+  \item Сколько нечётных чисел от 1 до 100?
+  \item Сколько чисел в нужной нам сумме?
+\end{enumerate}
+
+
+Снова простая загадка:
+\[
+  \frac{1}{2} + \frac{1}{4} = ?
+\]
+
+
+Более сложная загадка:
+\[
+  \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots = ?
+\]
+
+
+Рисуем квадрат и решаем геометрически.
+
+А что будет с делением на три?
+
+\[
+  \frac{1}{3} + \frac{1}{9} + \frac{1}{27} + \frac{1}{81} + \ldots = ?
+\]
+
+
+
+
+\section{Встреча 1}
+
+
+
+
+\end{document}

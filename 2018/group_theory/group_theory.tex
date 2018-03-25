@@ -1,0 +1,101 @@
+\documentclass[a4paper, 12pt]{article}
+
+
+\usepackage{mathrsfs}
+
+\usepackage{amscd}
+\usepackage[paper=a4paper,
+top=2cm, bottom=2cm, left=2cm, right=2cm, includefoot]{geometry} % размер листа бумаги
+
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{floatrow} % для выравнивания рисунка и подписи
+\usepackage{caption} % для пустых подписей
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath, amsfonts} % куча стандартных математических плюшек
+
+\usepackage{comment} % для комментариев
+
+\usepackage{multicol} % текст в несколько колонок
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+
+\usepackage{booktabs}
+
+\usepackage{url} % для вставки интернет-ссылок
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+\def\cN{\mathcal{N}}
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория групп}
+\chead{}
+\rhead{ЗПШ-2018}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+
+\section{Презентация}
+
+Презентация длится 10 минут, три дубля презентации для разных школьников. 
+Объявленная аудитория 9-11 класс.
+
+Знак «3» будет означать действие «умножь задуманное число на три». Тогда по смыслу тождество
+\[
+3 \cdot 5 = 5 \cdot 3
+\]
+означает два действия, выполненные в разных порядках.
+
+Пример группы. У робота андроида на левой ноге надет носок. Робот умеет выполнять команды $a$ — переодень носок на другую ногу и $b$ — сними носок, выверни наизнанку и надень на исходную ногу. Рисуем для данного примера диаграмму Кэли, не произнося таких страшных снов.
+
+Вводим нейтральный элемент группы $n$ — ничего не делать, обнаруживаем тождества $ab=ba$, $a^2=n$, $a^3b^2=a$. Мы используем запись $ab$ — сначала действие $a$, потом действие $b$.
+
+Ещё пример группы. Аня, Белла и Вика сидят на стульях 1, 2 и 3. Они умеют выполнять инструкцию $a=(123)$ и $b=(12)$. Инструкция $(345)$ означает, что тот, кто сидел на месте 3 садится на место 4; тот, кто сидел на месте 4, — на место 5; и тот, кто сидел на месте 5, — на место 3.
+
+Правда ли, что $ab=ba$?
+
+Кубик Рубика — тоже группа. Правда ли, что $\text{П}\text{В}=\text{В}\text{П}$? Здесь буква означает вращение соответствующей грани по часовой на $90^{\circ}$.
+
+\section{Встреча 1}
+
+
+
+\end{document}
