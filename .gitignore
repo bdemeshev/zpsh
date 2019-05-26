@@ -1,3 +1,14 @@
+*.xdv
+*.fls
+*.out
+*.log
+*.fdb_latexmk
+*.run.xml
+*.toc
+*-cache.yaml
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.synctex.gz
 
-2018/group_theory/group_theory.xdv
-2018/visual_proofs/visual_proofs.xdv
